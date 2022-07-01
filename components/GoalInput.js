@@ -23,15 +23,15 @@ function GoalInput({ addGoalHandler, visible, closeModel }) {
           style={styles.textInput}
           onChangeText={goalInputHandler}
           placeholder="Your course goal!"
-          placeholderTextColor='#fff'
+          // placeholderTextColor='#120438'
 
         />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
-            <Button onPress={onAddGoal} title="Add Goal" />
+            <Button onPress={closeModel} color='#f31282' title="Cancel" />
           </View>
           <View style={styles.button}>
-            <Button onPress={closeModel} title="Cancel" />
+            <Button onPress={onAddGoal} color='#5e0acc' title="Add Goal" />
           </View>
         </View>
       </View>
@@ -47,21 +47,23 @@ const styles = StyleSheet.create({
     width: 115,
     height: 100,
     margin: 20
-    // padding: 40,
   },
   inputContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 24,
-    backgroundColor: '#311b6b'
+    backgroundColor: '#311b6b',
+    paddingHorizontal: 24,
   },
   textInput: {
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#e4d0ff",
+    backgroundColor: "#e4d0ff",
+    color: '#120438',
+    borderRadius: 6,
     width: "100%",
-    padding: 8,
-    color: '#fff',
+    padding: 12,
     
   },
   buttonContainer: {

@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, StyleSheet,Text, Pressable } from 'react-native'
 
- const GoalItem = ({goal, deleteGoalHandler}) => {
+ const GoalItem = ({goal, deleteGoalHandler, id}) => {
   const onDelete = ()=>{
-    deleteGoalHandler(goal)
+    deleteGoalHandler(id)
   }
   return (
     <Pressable onPress={onDelete}>

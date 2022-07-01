@@ -10,12 +10,13 @@ function GoalInput({ addGoalHandler }) {
     addGoalHandler(text)
     setText('')
   }
+ 
   
 
   return (
     <View style={styles.inputContainer}>
       <TextInput
-      value={text}
+        value={text}
         style={styles.textInput}
         onChangeText={goalInputHandler}
         placeholder="Your course goal!"

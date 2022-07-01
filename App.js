@@ -16,18 +16,22 @@ export default function App() {
   const openModel = ()=>{
     setIsModalOpen(true)
   }
+  const closeModel = ()=>{
+    setIsModalOpen(false)
+  }
   const deleteGoalHandler = (deletedKey)=>{
     setGoals(state=>state.filter(({key})=> key!==deletedKey))
   }
   const addGoalHandler = (text) => {
     setGoals((state) => [...state, { text, key: Math.random().toString() }]);
+    closeModel()
   };
  
  
   return (
     <View style={styles.appContainer}>
        <Button onPress={openModel} title="Add new Goal ..." color={'#5e0acc'}/>
-      <GoalInput visible={isModalOpen}  addGoalHandler={addGoalHandler} />
+      <GoalInput closeModel={closeModel} visible={isModalOpen}  addGoalHandler={addGoalHandler} />
        
       <View style={styles.goalsContainer}>
 
